@@ -1,0 +1,23 @@
+{
+  "name": "Tether_protocols",
+  "version": "1.0.0",
+  "description": "Tether monorepo",
+  "main": "index.js",
+  "repository": "https://github.com/Tether/protocols.git",
+  "author": "Tether Fundation",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "lerna": "lerna",
+    "wsrun": "wsrun",
+    "build": "lerna link && wsrun build $PKG --fast-exit -r --stages --exclude-missing"
+  },
+  "devDependencies": {
+    "lerna": "^3.16.0",
+    "wsrun": "^5.0.2",
+    "husky": "^4.0.4"
+  }
+}
